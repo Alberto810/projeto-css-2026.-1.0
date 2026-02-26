@@ -13,10 +13,11 @@
 
     [x] Saber quem é o botão
     [x] Saber quando o botão foi clicado
-    [ ] Saber quem é o textarea  
-    [ ] Pegar o que tem dentro dele
-    [ ] Enviar para a IA
-    [ ] Pegar a resposta da IA e colocar na tela      
+    [x] Saber quem é o textarea  
+    [x] Pegar o que tem dentro dele
+    [x] Enviar para a IA
+    [x] Pegar a resposta da IA e colocar na tela 
+    [/] Estilizar a resposta     
 
     // Ir no HTML e pegar o botão
     // HTML = document (documento)
@@ -34,6 +35,7 @@ let endereco = "https://api.groq.com/openai/v1/chat/completions"
 // no botao
 
 async function gerarCodigo() {
+
     let textoUsuario = document.querySelector(".caixa-texto").value
     let blocoCodigo = document.querySelector(".bloco-codigo")
     let resultadoCodigo = document.querySelector(".resultado-codigo")
@@ -64,8 +66,6 @@ async function gerarCodigo() {
 
     blocoCodigo.textContent = resultado
     resultadoCodigo.srcdoc = resultado
-    
-
 
 }
 
